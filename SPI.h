@@ -9,7 +9,6 @@
 #define	SPI_H
 #include <stdint.h>
 #include "GPIO.h"
-#include "FILA.h"
 
 class SPI {
 public:
@@ -55,8 +54,6 @@ private:
     uint8_t _msk;
     GPIO *_slaves;
     static GPIO _slave;
-    static FILA<uint8_t> _rx_buffer;
-    static FILA<uint8_t> _tx_buffer;
 };
 
 #endif	/* SPI_H */
